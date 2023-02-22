@@ -6,15 +6,27 @@
     <group>
         <item
             android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="My Emart"/>
+        <item
+            android:id="@+id/nav_order"
             android:icon="@drawable/clipboard"
             android:title="My orders" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/heart"
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/heart_2"
             android:title="My wishlist" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/shopping_cart"
+            android:title="My Cart" />
+        <item
+            android:id="@+id/nav_my_Account"
             android:icon="@drawable/i1"
             android:title="My Account" />
+        <item
+            android:id="@+id/nav_Signout"
+            android:icon="@drawable/poweroff"
+            android:title="Sign Out"/>
     </group>
 </menu>
