@@ -29,6 +29,8 @@ public class Home_Activity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarHome.toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);//by default title not dsplay only logo
+
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
