@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Emart</string>
+    <string name="emart">E-mart</string>
+    <string name="e2">Next page</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign-up</string>
+    <string name="newuser">New user</string>
+    <string name="already">Already a user</string>
+    <string name="lg">LOGIN</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="Login_button">Login</string>
+    <string name="Sign">SignUp</string>
+    <string name="email2">Email</string>
+    <string name="pass2">Password(At least 8 char.)</string>
+    <string name="b2">SignUp</string>
+
+</resources>
