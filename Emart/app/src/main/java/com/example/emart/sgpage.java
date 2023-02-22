@@ -147,7 +147,7 @@ public class sgpage extends AppCompatActivity {
                        @Override
                        public void onComplete(@NonNull Task<DocumentReference> task) {
                            if(task.isSuccessful()){
-                               Intent mainintent = new Intent(sgpage.this,homeactivity.class);
+                               Intent mainintent = new Intent(sgpage.this,Home_Activity.class);
                                startActivity(mainintent);
 
                            }else{
