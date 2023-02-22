@@ -95,7 +95,7 @@ public class lgpage extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                     Intent mainIntent = new Intent(lgpage.this,homeactivity.class);
+                     Intent mainIntent = new Intent(lgpage.this,Home_Activity.class);
                      startActivity(mainIntent);
 
                     }else{

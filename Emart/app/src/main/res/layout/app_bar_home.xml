@@ -11,11 +11,12 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.Emart.AppBarOverlay">
 
-        <ImageView
-            android:layout_width="142dp"
-            android:layout_height="38dp"
-            android:arjustViewBounce="true"
-            android:src="@drawable/whatsapp_image_2023_02_20_at_15_51_18" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Emart.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
