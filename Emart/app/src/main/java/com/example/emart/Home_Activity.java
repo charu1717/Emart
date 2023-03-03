@@ -1,10 +1,14 @@
 package com.example.emart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -25,6 +29,9 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
+
+    private ImageView Home,Furniture,Electronics,Cosmetics,Fresh;
+    private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Fresh_text;
 
 
     @Override
@@ -50,7 +57,24 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        Home = findViewById(R.id.Home);
+        Furniture = findViewById(R.id.Furniture);
+        Electronics = findViewById(R.id.Electronics);
+        Cosmetics = findViewById(R.id.Cosmetics);
+        Fresh = findViewById(R.id.Fresh);
+        Home_text = findViewById(R.id.Home_text);
+        Furniture_text = findViewById(R.id.Furniture_text);
+        Electronics_text = findViewById(R.id.Electronics_text);
+        Cosmetics_text = findViewById(R.id.Cosmetics_text);
+        Fresh_text = findViewById(R.id.Fresh_text);
 
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Home = new Intent(Home_Activity.this,Home_Activity.class);
+                startActivity(Home);
+            }
+        });
     }
 
     @Override
