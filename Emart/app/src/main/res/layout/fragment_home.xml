@@ -8,56 +8,116 @@
 
     <FrameLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_width="350dp"
+        android:layout_height="115dp"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="70dp"
+            android:id="@+id/Home"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
             android:src="@drawable/home"></ImageView>
 
+        <TextView
+            android:id="@+id/Home_text"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="80dp"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+
         <ImageView
-            android:layout_width="70dp"
+            android:id="@+id/Furniture"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="88dp"
+            android:layout_marginLeft="76dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/furnitures"></ImageView>
 
+        <TextView
+            android:id="@+id/Furniture_text"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="80dp"
+            android:text="Furniture"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+
         <ImageView
-            android:layout_width="70dp"
+            android:id="@+id/Electronics"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="168dp"
+            android:layout_marginLeft="148dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/gadgets"></ImageView>
 
+        <TextView
+            android:id="@+id/Electronics_text"
+            android:layout_width="64dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="80dp"
+            android:text="Electronics"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+
         <ImageView
-            android:layout_width="70dp"
+            android:id="@+id/Cosmetics"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="248dp"
+            android:layout_marginLeft="218dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/cosmetics"></ImageView>
+
+        <TextView
+            android:id="@+id/Cosmetics_text"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="214dp"
+            android:layout_marginTop="80dp"
+            android:text="Cosmetics"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+
         <ImageView
-            android:layout_width="70dp"
+            android:id="@+id/Fresh"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="328dp"
+            android:layout_marginLeft="288dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/homedelivery"></ImageView>
+
+        <TextView
+            android:id="@+id/Fresh_text"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="296dp"
+            android:layout_marginTop="80dp"
+            android:text="Fresh"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_width="350dp"
+        android:layout_height="625dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.0">
