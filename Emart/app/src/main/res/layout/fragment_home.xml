@@ -192,7 +192,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/cosmeticshome"
+                android:id="@+id/cosmetichome"
                 android:layout_width="160dp"
                 android:layout_height="250dp"
                 android:layout_marginTop="255dp"
