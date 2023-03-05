@@ -10,9 +10,9 @@
         android:id="@+id/constraintLayout"
         android:layout_width="350dp"
         android:layout_height="115dp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        android:layout_marginBottom="31dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -114,13 +114,143 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="350dp"
-        android:layout_height="600dp"
+        android:layout_height="550dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0" >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_furniture"
+            android:layout_width="350dp"
+            android:layout_height="550dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/furniturehome"
+                android:layout_width="160dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Image1_main"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/f3"></ImageView>
+
+                <TextView
+                    android:id="@+id/Text1_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="28dp"
+                    android:text="Furniture"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Electronicshome"
+                android:layout_width="160dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="165dp">
+
+
+                <ImageView
+                    android:id="@+id/Image2_main"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/elec7"></ImageView>
+
+                <TextView
+                    android:id="@+id/Text2_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Electronic"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/cosmeticshome"
+                android:layout_width="160dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="255dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Image3_main"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/sk8"></ImageView>
+
+                <TextView
+                    android:id="@+id/Text3_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="Cosmetics"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    ></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/freshhome"
+                android:layout_width="160dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="255dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="165dp">
+
+                <ImageView
+                    android:id="@+id/Image4_main"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/fresh1"></ImageView>
+
+                <TextView
+                    android:id="@+id/Text4_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="Fresh"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"></TextView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
