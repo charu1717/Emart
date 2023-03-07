@@ -275,11 +275,9 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </FrameLayout>
-<<<<<<< HEAD
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
->>>>>>> 417448012482d8b0084e2de1f45324bc57b7f8dc
+
