@@ -24,11 +24,10 @@ RecyclerView F_playout;
 
         F_productlist = new ArrayList<>();
         F_productlist.add(new F_productitem(R.drawable.fur1,1,"Classic Tethered Metallic Table","13 rating","15000/-"));
-        F_productlist.add(new F_productitem(R.drawable.fur2,2,"Classic Tethered Metallic Table","12 rating","16000/-"));
-        F_productlist.add(new F_productitem(R.drawable.fur1,3,"Classic Tethered Metallic Table","12 rating","16000/-"));
-        F_productlist.add(new F_productitem(R.drawable.fur1,4,"Classic Tethered Metallic Table","12 rating","16000/-"));
-        F_productlist.add(new F_productitem(R.drawable.fur1,5,"Classic Tethered Metallic Table","12 rating","16000/-"));
-
+        F_productlist.add(new F_productitem(R.drawable.fur5,2,"White furnished Shoe rack","10 rating","20000/-"));
+        F_productlist.add(new F_productitem(R.drawable.fur3,3,"Aesthetic blush fur sofa","5 rating","25000/-"));
+        F_productlist.add(new F_productitem(R.drawable.fur4,4,"FullFurnished Dining Table","17 rating","60000/-"));
+        F_productlist.add(new F_productitem(R.drawable.f2,5,"Grey couch single sofa","13 rating","22000/-"));
 
 
         adapater = new F_productadapter(F_productlist,this);
