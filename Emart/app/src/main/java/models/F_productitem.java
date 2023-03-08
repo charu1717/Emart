@@ -1,10 +1,10 @@
 package models;
 
-public class productitem {
+public class F_productitem {
     int image,id;
     String title,rank,price;
 
-    public productitem(int image, int id, String title, String rank, String price) {
+    public F_productitem(int image, int id, String title, String rank, String price) {
         this.image = image;
         this.id = id;
         this.title = title;

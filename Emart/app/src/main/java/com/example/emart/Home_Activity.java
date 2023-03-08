@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -32,6 +33,8 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
 
     private ImageView Home,Furniture,Electronics,Cosmetics,Fresh;
     private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Fresh_text;
+
+    CardView card_furniture,card_electronics,card_cosmetics,card_fresh;
 
 
     @Override
@@ -67,6 +70,10 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         Electronics_text = findViewById(R.id.Electronics_text);
         Cosmetics_text = findViewById(R.id.Cosmetics_text);
         Fresh_text = findViewById(R.id.Fresh_text);
+        card_furniture = findViewById(R.id.card_furniture);
+        card_electronics = findViewById(R.id.card_Electronics);
+        card_cosmetics = findViewById(R.id.card_Cosmetics);
+        card_fresh = findViewById(R.id.card_Fresh);
 
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +82,16 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(Home);
             }
         });
+
+        card_furniture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Furniture_layout = new Intent(Home_Activity.this,furnitureproductcard.class);
+                startActivity(Furniture_layout);
+            }
+        });
+
+
     }
 
     @Override
