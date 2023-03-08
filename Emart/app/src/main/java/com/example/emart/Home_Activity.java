@@ -90,6 +90,20 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(Furniture_layout);
             }
         });
+        card_electronics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent electronic_layout = new Intent(Home_Activity.this,electronicproductcard.class);
+                startActivity(electronic_layout);
+            }
+        });
+        card_cosmetics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cosmetic_layout = new Intent(Home_Activity.this,cosmeticproductcard.class);
+                startActivity(cosmetic_layout);
+            }
+        });
 
 
     }
