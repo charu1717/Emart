@@ -19,22 +19,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp"
-            android:background="@color/white"
+            android:background="#FFFFFF"
             >
             <ImageView
-                android:id="@+id/furprimage1"
+                android:id="@+id/eleprimage1"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:src="@drawable/fur1"
+                android:src="@drawable/ele1"
                 android:scaleType="fitCenter"/>
 
             <TextView
-                android:id="@+id/furdes1"
+                android:id="@+id/eledes1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginVertical="10dp"
-                android:text="Classic Tethered Metallic Table"
+                android:text="MacBook Pro 2022"
                 android:textSize="20dp"
                 android:textColor="@color/black"></TextView>
 
@@ -65,7 +65,7 @@
                     android:layout_height="20dp" />
 
                 <TextView
-                    android:id="@+id/frank"
+                    android:id="@+id/elerank"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -78,12 +78,12 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/furcost1"
+                android:id="@+id/elecost1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginVertical="10dp"
-                android:text="15000/-"
+                android:text="80000/-"
                 android:textSize="25dp"
                 android:textColor="@color/black"></TextView>
 

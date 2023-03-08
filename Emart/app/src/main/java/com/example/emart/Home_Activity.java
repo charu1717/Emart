@@ -34,7 +34,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
     private ImageView Home,Furniture,Electronics,Cosmetics,Fresh;
     private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Fresh_text;
 
-    CardView card_furniture,card_electronics,card_cosmetics,card_fresh;
+    CardView card_furniture,card_electronics,card_cosmetics,card_grocery;
 
 
     @Override
@@ -73,7 +73,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         card_furniture = findViewById(R.id.card_furniture);
         card_electronics = findViewById(R.id.card_Electronics);
         card_cosmetics = findViewById(R.id.card_Cosmetics);
-        card_fresh = findViewById(R.id.card_Fresh);
+        card_grocery = findViewById(R.id.card_Grocery);
 
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +88,28 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
             public void onClick(View view) {
                 Intent Furniture_layout = new Intent(Home_Activity.this,furnitureproductcard.class);
                 startActivity(Furniture_layout);
+            }
+        });
+        card_electronics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent electronic_layout = new Intent(Home_Activity.this,electronicproductcard.class);
+                startActivity(electronic_layout);
+            }
+        });
+        card_cosmetics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cosmetic_layout = new Intent(Home_Activity.this,cosmeticproductcard.class);
+                startActivity(cosmetic_layout);
+            }
+        });
+
+        card_grocery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent grocery_layout = new Intent(Home_Activity.this,groceryproductcard.class);
+                startActivity(grocery_layout);
             }
         });
 

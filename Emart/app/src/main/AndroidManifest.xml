@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Emart"
         tools:targetApi="31">
         <activity
+            android:name=".groceryproductcard"
+            android:exported="false" />
+        <activity
+            android:name=".cosmeticproductcard"
+            android:exported="false" />
+        <activity
+            android:name=".electronicproductcard"
+            android:exported="false" />
+        <activity
             android:name=".furnitureproductcard"
             android:exported="false" />
         <activity
