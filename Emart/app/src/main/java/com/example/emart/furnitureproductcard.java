@@ -25,7 +25,7 @@ RecyclerView F_playout;
         F_productlist = new ArrayList<>();
         F_productlist.add(new F_productitem(R.drawable.fur1,1,"Classic Tethered Metallic Table","13 rating","15000/-"));
         F_productlist.add(new F_productitem(R.drawable.fur2,2,"Classic Tethered Metallic Table","12 rating","16000/-"));
-        F_productlist.add(new F_productitem(R.drawable.fur1,3,"Classic Tethered Metallic Table","12 rating","16000/-"));
+        F_productlist.add(new F_productitem(R.drawable.fur3,3,"Classic Tethered Metallic Table","12 rating","16000/-"));
         F_productlist.add(new F_productitem(R.drawable.fur1,4,"Classic Tethered Metallic Table","12 rating","16000/-"));
         F_productlist.add(new F_productitem(R.drawable.fur1,5,"Classic Tethered Metallic Table","12 rating","16000/-"));
 
