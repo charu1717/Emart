@@ -103,11 +103,11 @@
 
         <TextView
             android:id="@+id/Fresh_text"
-            android:layout_width="40dp"
+            android:layout_width="55dp"
             android:layout_height="20dp"
-            android:layout_marginLeft="296dp"
+            android:layout_marginLeft="288dp"
             android:layout_marginTop="80dp"
-            android:text="Fresh"
+            android:text="Grocery"
             android:textColor="@color/black"
             android:textStyle="bold"></TextView>
     </FrameLayout>
@@ -226,7 +226,7 @@
                     android:id="@+id/Text3_main"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="26dp"
+                    android:layout_marginLeft="21dp"
                     android:text="Cosmetics"
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -237,7 +237,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_Fresh"
+            android:id="@+id/card_Grocery"
             android:layout_width="165dp"
             android:layout_height="240dp"
             app:cardBackgroundColor="@color/white"
@@ -265,8 +265,8 @@
                     android:id="@+id/Text4_main"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:text="Fresh"
+                    android:layout_marginLeft="38dp"
+                    android:text="Grocery"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25dp"

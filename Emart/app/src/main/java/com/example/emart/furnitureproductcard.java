@@ -30,6 +30,7 @@ RecyclerView F_playout;
         F_productlist.add(new F_productitem(R.drawable.f2,5,"Grey couch single sofa","13 rating","22000/-"));
 
 
+
         adapater = new F_productadapter(F_productlist,this);
         F_playout.setAdapter(adapater);
         F_playout.setLayoutManager(new GridLayoutManager(this,2));

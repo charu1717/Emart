@@ -9,9 +9,7 @@ import android.os.Bundle;
 import java.util.ArrayList;
 
 import adapter.E_productadapter;
-import adapter.F_productadapter;
 import models.E_productitem;
-import models.F_productitem;
 
 public class electronicproductcard extends AppCompatActivity {
 
