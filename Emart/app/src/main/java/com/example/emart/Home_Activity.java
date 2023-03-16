@@ -25,6 +25,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.emart.databinding.ActivityHomeBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 public class Home_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -47,19 +50,17 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         setSupportActionBar(binding.appBarHome.toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);//by default title not dsplay only logo
 
-
-
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setOpenableLayout(drawer)
-                .build();
+        // Passing each menu ID as a set of Ids because each menu should be considered as top level destinations.
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow).setOpenableLayout(drawer).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        NavigationView navigationView1 = (NavigationView) findViewById(R.id.nav_view);
+        navigationView1.setNavigationItemSelectedListener(this);
+
         Home = findViewById(R.id.Home);
         Furniture = findViewById(R.id.Furniture);
         Electronics = findViewById(R.id.Electronics);
@@ -82,7 +83,6 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(Home);
             }
         });
-
         card_furniture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,7 +104,6 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(cosmetic_layout);
             }
         });
-
         card_grocery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,8 +111,6 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(grocery_layout);
             }
         });
-
-
     }
 
     @Override
