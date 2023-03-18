@@ -12,7 +12,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="25dp"
         android:layout_margin="5dp"
-        android:id="@+id/card3">
+        android:id="@+id/cosmeticcard">
 
 
         <LinearLayout
@@ -23,14 +23,14 @@
             android:background="@color/white"
             >
             <ImageView
-                android:id="@+id/cosmprimage"
+                android:id="@+id/cospimage"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:src="@drawable/co1"
                 android:scaleType="fitCenter"/>
 
             <TextView
-                android:id="@+id/cosmdes"
+                android:id="@+id/cospdesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
@@ -66,7 +66,7 @@
                     android:layout_height="20dp" />
 
                 <TextView
-                    android:id="@+id/cosmrank"
+                    android:id="@+id/cosprank"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -79,7 +79,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/cosmcost"
+                android:id="@+id/cospprice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"

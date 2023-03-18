@@ -30,7 +30,7 @@
         <TextView
             android:id="@+id/Pddecs"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="100dp"
             android:padding="10dp"
             android:text="Apple MacBook pro"
             android:textAlignment="center"

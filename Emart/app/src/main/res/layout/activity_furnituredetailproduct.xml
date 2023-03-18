@@ -30,9 +30,9 @@
         <TextView
             android:id="@+id/Pddecs"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="100dp"
             android:padding="10dp"
-            android:text="Classic Tethered Metallic Table, Golden Polished touch for living room (Set of 2)"
+            android:text="Classic Tethered Metallic Table"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="25dp"

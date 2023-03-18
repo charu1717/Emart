@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class furnituredetailproduct extends AppCompatActivity {
     ImageView furimg;
-    TextView furprice,furtaddtocart,furdes,furrank;
+    TextView furprice,furaddtocart,furdes,furrank;
 
     Button furbuy;
 
@@ -22,7 +22,7 @@ public class furnituredetailproduct extends AppCompatActivity {
         setContentView(R.layout.activity_furnituredetailproduct);
         furimg = findViewById(R.id.Pdimage);
         furprice = findViewById(R.id.Pdprice);
-        furtaddtocart = findViewById(R.id.AddCartFurPr);
+        furaddtocart = findViewById(R.id.AddCartFurPr);
         furbuy = findViewById(R.id.BuyFurPr);
         furdes=findViewById(R.id.Pddecs);
         furrank = findViewById(R.id.frank);
