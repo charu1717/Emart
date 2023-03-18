@@ -5,23 +5,16 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.emart.R;
 import com.example.emart.cosmeticdetailproduct;
-import com.example.emart.electronicdetailproduct;
-
 import java.util.ArrayList;
-
 import models.C_productitem;
-import models.E_productitem;
-import models.F_productitem;
 
 public class C_productadapter extends RecyclerView.Adapter<C_productadapter.viewHolder> {
     ArrayList<C_productitem> arrayList = new ArrayList<>();
@@ -36,8 +29,8 @@ public class C_productadapter extends RecyclerView.Adapter<C_productadapter.view
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.cosmeticproductlayout,parent,false);
-        viewHolder viewHolder2 = new viewHolder(view);
-        return viewHolder2;
+        viewHolder viewHolder1 = new viewHolder(view);
+        return viewHolder1;
     }
 
     @Override
@@ -46,10 +39,10 @@ public class C_productadapter extends RecyclerView.Adapter<C_productadapter.view
         holder.C_desc.setText(arrayList.get(position).getTitle());
         holder.C_price.setText(arrayList.get(position).getPrice());
         holder.C_rank.setText(arrayList.get(position).getRank());
-   holder.card3.setOnClickListener(new View.OnClickListener() {
+   holder.C_card.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(context, cosmeticdetailproduct.class );
+        Intent intent = new Intent(context, cosmeticdetailproduct.class);
         intent.putExtra("cosmetic",arrayList.get(position).getImage());
         intent.putExtra("desc",arrayList.get(position).getTitle());
         intent.putExtra("price",arrayList.get(position).getPrice());
@@ -68,15 +61,15 @@ public class C_productadapter extends RecyclerView.Adapter<C_productadapter.view
     public class viewHolder extends RecyclerView.ViewHolder{
         public ImageView C_pimage;
         public TextView C_desc,C_price,C_rank;
-        CardView card3;
+        CardView C_card;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            C_pimage=itemView.findViewById(R.id.cosmprimage);
-            C_desc=itemView.findViewById(R.id.cosmdes);
-            C_price=itemView.findViewById(R.id.cosmcost);
-            C_rank=itemView.findViewById(R.id.cosmrank);
-            card3=itemView.findViewById(R.id.card3);
+            C_pimage=itemView.findViewById(R.id.cospimage);
+            C_desc=itemView.findViewById(R.id.cospdesc);
+            C_price=itemView.findViewById(R.id.cospprice);
+            C_rank=itemView.findViewById(R.id.cosprank);
+            C_card=itemView.findViewById(R.id.cosmeticcard);
 
         }
     }

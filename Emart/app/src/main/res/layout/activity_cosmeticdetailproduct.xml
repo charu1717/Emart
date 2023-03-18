@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cosmeticdetailproduct">
+
     <LinearLayout
         android:id="@+id/cosmeticdetail"
         android:layout_width="match_parent"
@@ -19,25 +20,25 @@
 
         <ImageView
             android:layout_marginTop="40dp"
-            android:id="@+id/cosmprimage"
+            android:id="@+id/cospdimage"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:padding="10dp"
             android:src="@drawable/co1" />
 
         <TextView
-            android:id="@+id/cosdecs"
+            android:id="@+id/cospddesc"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="100dp"
             android:padding="10dp"
-            android:text="Kylie cosmetic stormi collection"
+            android:text="Kylie cosmetic stormi palette"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/cosmcost"
+            android:id="@+id/cospdprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -47,7 +48,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/addtocartcos"
+            android:id="@+id/cospdaddtocart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="240dp"
@@ -68,17 +69,13 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/starfull"
-
-                />
+                android:src="@drawable/starfull" />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/starfull"
-
-                />
+                android:src="@drawable/starfull" />
 
             <ImageView
                 android:layout_width="30dp"
@@ -87,7 +84,7 @@
                 android:src="@drawable/starhalf" />
 
             <TextView
-                android:id="@+id/cosmrank"
+                android:id="@+id/cospdrank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -97,10 +94,10 @@
                 android:text="40 ranking"
                 android:textColor="#F41C35"
                 android:textSize="20dp" />
-        </LinearLayout>
 
+        </LinearLayout>
         <Button
-            android:id="@+id/BuycosPr"
+            android:id="@+id/cospdbuy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
@@ -109,7 +106,5 @@
             android:text="Buy Now"
             android:textColor="#F8F8F8"
             android:textSize="25dp" />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

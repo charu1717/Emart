@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,12 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.emart.R;
 import com.example.emart.electronicdetailproduct;
-import com.example.emart.furnituredetailproduct;
 
 import java.util.ArrayList;
 
 import models.E_productitem;
-import models.F_productitem;
 
 public class E_productadapter extends RecyclerView.Adapter<E_productadapter.viewHolder> {
     ArrayList<E_productitem> arrayList = new ArrayList<>();
