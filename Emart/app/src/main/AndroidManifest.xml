@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Emart"
         tools:targetApi="31">
         <activity
+            android:name=".grocerydetailproduct"
+            android:exported="false" />
+        <activity
             android:name=".cosmeticdetailproduct"
             android:exported="false" />
         <activity
