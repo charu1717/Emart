@@ -34,8 +34,8 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
 
-    private ImageView Home,Furniture,Electronics,Cosmetics,Fresh;
-    private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Fresh_text;
+    private ImageView Home,Furniture,Electronics,Cosmetics,Grocery;
+    private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Grocery_text;
 
     CardView card_furniture,card_electronics,card_cosmetics,card_grocery;
 
@@ -65,12 +65,12 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         Furniture = findViewById(R.id.Furniture);
         Electronics = findViewById(R.id.Electronics);
         Cosmetics = findViewById(R.id.Cosmetics);
-        Fresh = findViewById(R.id.Fresh);
+        Grocery = findViewById(R.id.Fresh);
         Home_text = findViewById(R.id.Home_text);
         Furniture_text = findViewById(R.id.Furniture_text);
         Electronics_text = findViewById(R.id.Electronics_text);
         Cosmetics_text = findViewById(R.id.Cosmetics_text);
-        Fresh_text = findViewById(R.id.Fresh_text);
+        Grocery_text = findViewById(R.id.Fresh_text);
         card_furniture = findViewById(R.id.card_furniture);
         card_electronics = findViewById(R.id.card_Electronics);
         card_cosmetics = findViewById(R.id.card_Cosmetics);
@@ -81,6 +81,62 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
             public void onClick(View view) {
                 Intent Home = new Intent(Home_Activity.this,Home_Activity.class);
                 startActivity(Home);
+            }
+        });
+        Furniture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent furniture = new Intent(Home_Activity.this,furnitureproductcard.class);
+                startActivity(furniture);
+            }
+        });
+        Furniture_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent furnituret = new Intent(Home_Activity.this,furnitureproductcard.class);
+                startActivity(furnituret);
+            }
+        });
+        Electronics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent electronics = new Intent(Home_Activity.this,electronicproductcard.class);
+                startActivity(electronics);
+            }
+        });
+        Electronics_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent electronicst = new Intent(Home_Activity.this,electronicproductcard.class);
+                startActivity(electronicst);
+            }
+        });
+        Cosmetics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cosmetic = new Intent(Home_Activity.this,cosmeticproductcard.class);
+                startActivity(cosmetic);
+            }
+        });
+        Cosmetics_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cosmetict = new Intent(Home_Activity.this,cosmeticproductcard.class);
+                startActivity(cosmetict);
+            }
+        });
+        Grocery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent grocery = new Intent(Home_Activity.this,groceryproductcard.class);
+                startActivity(grocery);
+            }
+        });
+        Grocery_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent groceryt = new Intent(Home_Activity.this,groceryproductcard.class);
+                startActivity(groceryt);
             }
         });
         card_furniture.setOnClickListener(new View.OnClickListener() {
