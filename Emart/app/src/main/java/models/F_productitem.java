@@ -4,7 +4,7 @@ public class F_productitem {
     int image,id;
     String title,rank,price,addcart;
 
-    public F_productitem(int image, int id, String title, String rank, String price) {
+    public F_productitem(int image, int id, String title, String rank, String price,String addcart) {
         this.addcart = addcart;
         this.image = image;
         this.id = id;
@@ -15,6 +15,10 @@ public class F_productitem {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public void setAddcart(String addcart) {
+        this.addcart = addcart;
     }
 
     public void setId(int id) {
@@ -33,9 +37,6 @@ public class F_productitem {
         this.price = price;
     }
 
-    public void setAddcart(String addcart) {
-        this.addcart = addcart;
-    }
 
     public int getImage() {
         return image;

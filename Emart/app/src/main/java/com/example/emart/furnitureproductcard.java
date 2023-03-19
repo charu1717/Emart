@@ -26,11 +26,12 @@ RecyclerView F_playout;
         F_playout = findViewById(R.id.furnitureproductcard);
         F_playout.setLayoutManager(new GridLayoutManager(this,2));
 
-        arrayList.add(new F_productitem(R.drawable.fur1,1,"Classic Tethered Metallic Table","13 rating","15000/-"));
-        arrayList.add(new F_productitem(R.drawable.fur5,2,"White furnished Shoe rack","10 rating","20000/-"));
-        arrayList.add(new F_productitem(R.drawable.fur3,3,"Aesthetic blush fur sofa","5 rating","25000/-"));
-        arrayList.add(new F_productitem(R.drawable.fur4,4,"FullFurnished Dining Table","17 rating","60000/-"));
-        arrayList.add(new F_productitem(R.drawable.f2,5,"Grey couch single sofa","13 rating","22000/-"));
+        arrayList.add(new F_productitem(R.drawable.fur1,1,"Classic Tethered Metallic Table","13 rating","15000/-","Add to Cart"));
+        arrayList.add(new F_productitem(R.drawable.fur5,2,"White furnished Shoe rack","10 rating","20000/-","Add to Cart"));
+        arrayList.add(new F_productitem(R.drawable.fur3,3,"Aesthetic blush fur sofa","5 rating","25000/-","Add to Cart"));
+        arrayList.add(new F_productitem(R.drawable.fur4,4,"FullFurnished Dining Table","17 rating","60000/-","Add to Cart"));
+        arrayList.add(new F_productitem(R.drawable.f2,5,"Grey couch single sofa","13 rating","22000/-","Add to Cart"));
+        arrayList.add(new F_productitem(R.drawable.f3,6,"Mustered triple joint sofa","6 rating","72000/-","Add to Cart"));
 
         F_productadapter f_productadapter = new F_productadapter(this,arrayList);
         F_playout.setAdapter(f_productadapter);

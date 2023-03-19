@@ -29,6 +29,7 @@ public class groceryproductcard extends AppCompatActivity {
         arrayList.add(new G_productitem(R.drawable.g3,3,"Cornflakes (Pack of 2)","5000 rating","100/-"));
         arrayList.add(new G_productitem(R.drawable.g4,4,"MyFitness PeanutButter, 1.2kg","170 rating","300/-"));
         arrayList.add(new G_productitem(R.drawable.g5,5,"Karachi Bakery biscuit","13000 rating","100/-"));
+        arrayList.add(new G_productitem(R.drawable.g6,6,"Saffola Masala Oats 38g","1600 rating","120/-"));
 
 
 

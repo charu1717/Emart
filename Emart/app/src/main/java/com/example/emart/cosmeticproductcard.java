@@ -16,17 +16,18 @@ public class cosmeticproductcard extends AppCompatActivity {
     RecyclerView C_playout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cosmeticproductcard);
         C_playout = findViewById(R.id.cosmeticproductcard);
         C_playout.setLayoutManager(new GridLayoutManager(this,2));
 
         arrayList.add(new C_productitem(R.drawable.co1,1,"Kylie cosmetic stormi palette","40 rating","7000/-"));
-        arrayList.add(new C_productitem(R.drawable.co2,2,"Fenty skin care ","10 rating","10000/-"));
+        arrayList.add(new C_productitem(R.drawable.co2,2,"Fenty skin care","10 rating","10000/-"));
         arrayList.add(new C_productitem(R.drawable.co3,3,"Huda beauty lipstick","100 rating","1200/-"));
-        arrayList.add(new C_productitem(R.drawable.co4,4,"Blush Bronzer Highlighter palette ","60 rating","1000/-"));
+        arrayList.add(new C_productitem(R.drawable.co4,4,"Blush Bronzer Highlighter palette","60 rating","1000/-"));
         arrayList.add(new C_productitem(R.drawable.p4,5,"Chanel wonderlust perfume","50 rating","5000/-"));
+        arrayList.add(new C_productitem(R.drawable.co5,6,"NARS Audacious Lipstick","150 rating","2300/-"));
 
         C_productadapter c_productadapter = new C_productadapter(this,arrayList);
         C_playout.setAdapter(c_productadapter);
