@@ -62,10 +62,11 @@ public class F_productadapter extends RecyclerView.Adapter<F_productadapter.view
 
     public class viewHolder extends RecyclerView.ViewHolder{
         public ImageView F_pimage;
-        public TextView F_desc,F_price,F_rank;
+        public TextView F_desc,F_price,F_rank,F_addcart;
         CardView card1;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
+            F_addcart = itemView.findViewById(R.id.AddCartFurPr);
             F_pimage=itemView.findViewById(R.id.furprimage1);
             F_desc=itemView.findViewById(R.id.furdes1);
             F_price=itemView.findViewById(R.id.furcost1);

@@ -47,7 +47,7 @@ public class G_productadapter extends RecyclerView.Adapter<G_productadapter.view
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, grocerydetailproduct.class);
-                intent.putExtra("furniture",arrayList.get(position).getImage());
+                intent.putExtra("grocery",arrayList.get(position).getImage());
                 intent.putExtra("desc",arrayList.get(position).getTitle());
                 intent.putExtra("price",arrayList.get(position).getPrice());
                 intent.putExtra("rank",arrayList.get(position).getRank());
@@ -68,10 +68,10 @@ public class G_productadapter extends RecyclerView.Adapter<G_productadapter.view
         CardView card4;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            G_pimage=itemView.findViewById(R.id.furprimage1);
-            G_desc=itemView.findViewById(R.id.furdes1);
-            G_price=itemView.findViewById(R.id.furcost1);
-            G_rank=itemView.findViewById(R.id.frank);
+            G_pimage=itemView.findViewById(R.id.groprimage1);
+            G_desc=itemView.findViewById(R.id.grodes1);
+            G_price=itemView.findViewById(R.id.grocost1);
+            G_rank=itemView.findViewById(R.id.grorank);
             card4=itemView.findViewById(R.id.card4);
         }
     }
