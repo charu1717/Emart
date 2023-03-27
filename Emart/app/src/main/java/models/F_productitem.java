@@ -46,7 +46,7 @@ public class F_productitem {
         return id;
     }
 
-    public String getAddcart() {
+    public String g3etAddcart() {
         return addcart;
     }
 
