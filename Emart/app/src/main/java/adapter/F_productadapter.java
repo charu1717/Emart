@@ -46,10 +46,10 @@ public class F_productadapter extends RecyclerView.Adapter<F_productadapter.view
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, furnituredetailproduct.class);
-                intent.putExtra("furniture",arrayList.get(position).getImage());
-                intent.putExtra("desc",arrayList.get(position).getTitle());
-                intent.putExtra("price",arrayList.get(position).getPrice());
-                intent.putExtra("rank",arrayList.get(position).getRank());
+                intent.putExtra("furniture", arrayList.get(position).getImage());
+                intent.putExtra("desc", arrayList.get(position).getTitle());
+                intent.putExtra("price", arrayList.get(position).getPrice());
+                intent.putExtra("rank", arrayList.get(position).getRank());
                 context.startActivity(intent);
             }
         });
@@ -62,7 +62,7 @@ public class F_productadapter extends RecyclerView.Adapter<F_productadapter.view
 
     public class viewHolder extends RecyclerView.ViewHolder{
         public ImageView F_pimage;
-        public TextView F_desc,F_price,F_rank,F_addcart;
+        public TextView F_desc,F_price,F_rank,F_addcart,F_buy;
         CardView card1;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -72,6 +72,7 @@ public class F_productadapter extends RecyclerView.Adapter<F_productadapter.view
             F_price=itemView.findViewById(R.id.furcost1);
             F_rank=itemView.findViewById(R.id.frank);
             card1 = itemView.findViewById(R.id.card1);
+            F_buy = itemView.findViewById(R.id.BuyFurPr);
         }
     }
 }

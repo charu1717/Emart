@@ -5,18 +5,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -27,7 +22,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.emart.databinding.ActivityHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 
 public class Home_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -35,9 +29,15 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
     private ActivityHomeBinding binding;
 
     private ImageView Home,Furniture,Electronics,Cosmetics,Grocery;
+
+    private View cart;
     private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Grocery_text;
 
     CardView card_furniture,card_electronics,card_cosmetics,card_grocery;
+
+    TextView headername,headeremail;
+
+    FirebaseUser firebaseAuth;
 
 
     @Override
@@ -61,6 +61,13 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         NavigationView navigationView1 = (NavigationView) findViewById(R.id.nav_view);
         navigationView1.setNavigationItemSelectedListener(this);
 
+        View headerview = navigationView.getHeaderView(0);
+        headername = headerview.findViewById(R.id.main_fullname);
+        headeremail = headerview.findViewById(R.id.main_email);
+
+
+
+
         Home = findViewById(R.id.Home);
         Furniture = findViewById(R.id.Furniture);
         Electronics = findViewById(R.id.Electronics);
@@ -75,6 +82,8 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         card_electronics = findViewById(R.id.card_Electronics);
         card_cosmetics = findViewById(R.id.card_Cosmetics);
         card_grocery = findViewById(R.id.card_Grocery);
+        cart = findViewById(R.id.main_cart_icon);
+
 
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,6 +176,9 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(grocery_layout);
             }
         });
+
+
+
     }
 
     @Override
