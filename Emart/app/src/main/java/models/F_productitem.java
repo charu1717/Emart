@@ -2,15 +2,20 @@ package models;
 
 public class F_productitem {
     int image,id;
-    String title,rank,price,addcart;
+    String title,rank,price,addcart,buy;
 
-    public F_productitem(int image, int id, String title, String rank, String price,String addcart) {
+    public F_productitem(int image, int id, String title, String rank, String price,String addcart, String buy) {
         this.addcart = addcart;
         this.image = image;
         this.id = id;
         this.title = title;
         this.rank = rank;
         this.price = price;
+        this.buy = buy;
+    }
+
+    public void setBuy(String buy) {
+        this.buy = buy;
     }
 
     public void setImage(int image) {
@@ -42,12 +47,16 @@ public class F_productitem {
         return image;
     }
 
-    public int getId() {
-        return id;
+    public String getAddcart() {
+        return addcart;
     }
 
-    public String g3etAddcart() {
-        return addcart;
+    public String getBuy() {
+        return buy;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
