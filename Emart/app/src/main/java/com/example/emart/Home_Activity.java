@@ -1,10 +1,12 @@
 package com.example.emart;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,25 +23,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.emart.databinding.ActivityHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Home_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
 
-    private ImageView Home,Furniture,Electronics,Cosmetics,Grocery;
+    private TextView fullname,mail;
+
+    private ImageView Home,Furniture,Electronics,Cosmetics,Grocery,logo;
 
     private View cart;
+    private Button logout;
     private TextView Home_text,Furniture_text,Electronics_text,Cosmetics_text,Grocery_text;
 
     CardView card_furniture,card_electronics,card_cosmetics,card_grocery;
 
     TextView headername,headeremail;
 
-    FirebaseUser firebaseAuth;
+    FirebaseAuth fAuth;
+
+    FirebaseFirestore fstore;
+    String userId;
 
 
+
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,17 +69,21 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
+        navigationView.bringToFront();
         NavigationView navigationView1 = (NavigationView) findViewById(R.id.nav_view);
         navigationView1.setNavigationItemSelectedListener(this);
-
         View headerview = navigationView.getHeaderView(0);
-        headername = headerview.findViewById(R.id.main_fullname);
-        headeremail = headerview.findViewById(R.id.main_email);
+
+        fAuth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
+
+        userId = fAuth.getCurrentUser().getUid();
 
 
 
-
+        fullname = findViewById(R.id.main_fullname);
+        mail = findViewById(R.id.main_email);
+        logo = findViewById(R.id.Applogo);
         Home = findViewById(R.id.Home);
         Furniture = findViewById(R.id.Furniture);
         Electronics = findViewById(R.id.Electronics);
@@ -83,9 +99,17 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         card_cosmetics = findViewById(R.id.card_Cosmetics);
         card_grocery = findViewById(R.id.card_Grocery);
         cart = findViewById(R.id.main_cart_icon);
+        logout = findViewById(R.id.Logout);
 
 
         Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Home = new Intent(Home_Activity.this,Home_Activity.class);
+                startActivity(Home);
+            }
+        });
+        logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent Home = new Intent(Home_Activity.this,Home_Activity.class);
@@ -176,6 +200,14 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(grocery_layout);
             }
         });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent logout = new Intent(Home_Activity.this,MainActivity.class);
+                logout.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(logout);
+            }
+        });
 
 
 
@@ -197,8 +229,6 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         } else if (id == R.id.main_cart_icon) {//to cart
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
     @Override
@@ -208,23 +238,25 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 || super.onSupportNavigateUp();
     }
 
-    public boolean onNavigationItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(MenuItem menuItem){
 
-        int id = item.getItemId();
 
-        if(id == R.id.nav_home){
-            
-        } else if (id == R.id.nav_order) {
-            
-        } else if (id == R.id.nav_wishlist) {
-            
-        }else if (id == R.id.nav_cart){
-            
-        } else if (id == R.id.nav_my_Account) {
-            
-        } else if (id == R.id.nav_Signout) {
-            
+
+        switch (menuItem.getItemId()){
+            case R.id.nav_order:
+                Intent order = new Intent(Home_Activity.this,myorder.class);
+                startActivity(order);
+                break;
+            case R.id.nav_cart:
+                Intent cart = new Intent(Home_Activity.this,mycart.class);
+                startActivity(cart);
+                break;
+            case R.id.nav_my_Account:
+                Intent account = new Intent(Home_Activity.this,myaccount.class);
+                startActivity(account);
+                break;
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

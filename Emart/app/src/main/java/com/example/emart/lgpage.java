@@ -97,6 +97,7 @@ public class lgpage extends AppCompatActivity {
                     if(task.isSuccessful()){
                      Intent mainIntent = new Intent(lgpage.this,Home_Activity.class);
                      startActivity(mainIntent);
+                     finish();
 
                     }else{
                         String error = task.getException().getMessage();

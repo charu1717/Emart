@@ -21,6 +21,7 @@
 
 
             <ImageView
+                android:id="@+id/Applogo"
                 android:layout_width="wrap_content"
                 android:layout_height="87dp"
                 android:layout_marginTop="-14dp"

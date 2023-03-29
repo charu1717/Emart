@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,9 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.core.Tag;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -28,11 +31,12 @@ import java.util.Map;
 
 public class sgpage extends AppCompatActivity {
     TextView t1;
-    private EditText Name,Sign_Email,Sign_Password;
+    private EditText Name, Sign_Email, Sign_Password;
     private Button Signup;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
+    String userId;
 
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
@@ -53,7 +57,7 @@ public class sgpage extends AppCompatActivity {
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent s_l_intent = new Intent(sgpage.this,lgpage.class);
+                Intent s_l_intent = new Intent(sgpage.this, lgpage.class);
                 startActivity(s_l_intent);
             }
         });
@@ -116,58 +120,67 @@ public class sgpage extends AppCompatActivity {
     }
 
     private void checkInputs() {
-        if(!TextUtils.isEmpty(Sign_Email.getText())){
-            if(!TextUtils.isEmpty(Name.getText())){
-                if(!TextUtils.isEmpty(Sign_Password.getText()) && Sign_Password.length() >= 0){
+        if (!TextUtils.isEmpty(Sign_Email.getText())) {
+            if (!TextUtils.isEmpty(Name.getText())) {
+                if (!TextUtils.isEmpty(Sign_Password.getText()) && Sign_Password.length() >= 0) {
                     Signup.setEnabled(true);
-                }else{
+                } else {
                     Signup.setEnabled(false);
                 }
-            }else{
+            } else {
                 Signup.setEnabled(false);
             }
-        } else{
+        } else {
             Signup.setEnabled(false);
         }
     }
 
-    private void checkemailandpassword(){
-    if(Sign_Email.getText().toString().matches(emailPattern)){
+    private void checkemailandpassword() {
+        if (Sign_Email.getText().toString().matches(emailPattern)) {
 
 
-        firebaseAuth.createUserWithEmailAndPassword(Sign_Email.getText().toString(),Sign_Password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-               if(task.isSuccessful()){
+            firebaseAuth.createUserWithEmailAndPassword(Sign_Email.getText().toString(), Sign_Password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        userId= firebaseAuth.getCurrentUser().getUid();
+                        DocumentReference documentReference = firebaseFirestore.collection("users").document(userId);
+                        Map<String, Object> userdata = new HashMap<>();
+                        userdata.put("Name", Name.getText().toString());
+                        userdata.put("Email", Sign_Email.getText().toString());
+                        documentReference.set(userdata).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            private String Tag;
 
-                   Map<Object,String> userdata = new HashMap<>();
-                   userdata.put("Name",Name.getText().toString());
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d(Tag,"onSuccess: user Profile is created for " + userId);
 
-                   firebaseFirestore.collection("users").add(userdata).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                       @Override
-                       public void onComplete(@NonNull Task<DocumentReference> task) {
-                           if(task.isSuccessful()){
-                               Intent mainintent = new Intent(sgpage.this,Home_Activity.class);
-                               startActivity(mainintent);
+                            }});
 
-                           }else{
-                               String error = task.getException().getMessage();
-                               Toast.makeText(sgpage.this, error, Toast.LENGTH_SHORT).show();
-                           }
-                       }
-                   });
+                        firebaseFirestore.collection("users").add(userdata).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentReference> task) {
+                                if (task.isSuccessful()) {
+                                    Intent mainintent = new Intent(sgpage.this, Home_Activity.class);
+                                    startActivity(mainintent);
+                                    finish();
+
+                                } else {
+                                    String error = task.getException().getMessage();
+                                    Toast.makeText(sgpage.this, error, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
 
 
-               }else{
-                   String error = task.getException().getMessage();
-                   Toast.makeText(sgpage.this, error, Toast.LENGTH_SHORT).show();
-               }
-            }
-        });
-    }else{
-        Sign_Email.setError("Invalid Email");
+                    } else {
+                        String error = task.getException().getMessage();
+                        Toast.makeText(sgpage.this, error, Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        } else {
+            Sign_Email.setError("Invalid Email");
+        }
     }
-    }
-
-
 }
