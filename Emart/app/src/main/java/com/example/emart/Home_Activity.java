@@ -42,7 +42,6 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
 
     CardView card_furniture,card_electronics,card_cosmetics,card_grocery;
 
-    TextView headername,headeremail;
 
     FirebaseAuth fAuth;
 
@@ -85,6 +84,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         fstore = FirebaseFirestore.getInstance();
 
         userId = fAuth.getCurrentUser().getUid();
+
 
 
 

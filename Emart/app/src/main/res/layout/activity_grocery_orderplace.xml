@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Orderplaced"
+    tools:context=".grocery_orderplace"
     android:orientation="vertical">
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_orderplaced"
         android:layout_width="match_parent"
@@ -48,7 +47,6 @@
         android:text="Please check your Email for order confirmation and delivery details."
         android:textSize="25dp"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,9 +54,9 @@
 
         <ImageView
             android:id="@+id/imageorderplaced"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/fur1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/g1"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             />
@@ -67,19 +65,19 @@
             android:id="@+id/descr_oderplaced"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Classic Tethered Metallic Table"
+            android:text="Cadbury Oreo(pack of 3)"
             android:padding="8dp"
             android:textColor="@color/black"
-            android:textSize="20dp"
+            android:textSize="22dp"
             android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/price_orderplaced"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15000\-"
-            android:layout_marginLeft="-220dp"
-            android:textSize="30dp"
+            android:text="70\-"
+            android:layout_marginLeft="-200dp"
+            android:textSize="22dp"
             android:textColor="#EF0D0D"
             android:layout_marginTop="80dp"/>
     </LinearLayout>

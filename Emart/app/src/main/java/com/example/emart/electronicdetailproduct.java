@@ -43,7 +43,7 @@ public class electronicdetailproduct extends AppCompatActivity {
         Elebuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main = new Intent(electronicdetailproduct.this,orderplaced.class);
+                Intent main = new Intent(electronicdetailproduct.this, elec_orderplaced.class);
                 startActivity(main);
             }
         });

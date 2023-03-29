@@ -91,18 +91,6 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/whatsapp_image_2023_02_20_at_15_51_18" />
 
-        <ImageView
-            android:id="@+id/cancel_login"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.095"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
-            app:srcCompat="@drawable/close" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
