@@ -6,7 +6,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,6 +21,7 @@ public class furnitureproductcard extends AppCompatActivity {
 ArrayList<F_productitem> arrayList = new ArrayList<>();
 F_productadapter adapater;
 RecyclerView F_playout;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +37,7 @@ RecyclerView F_playout;
         arrayList.add(new F_productitem(R.drawable.fur4,4,"FullFurnished Dining Table","17 rating","60000/-","Add to Cart","Buy Now"));
         arrayList.add(new F_productitem(R.drawable.f2,5,"Grey couch single sofa","13 rating","22000/-","Add to Cart","Buy Now"));
         arrayList.add(new F_productitem(R.drawable.f3,6,"Mustered triple joint sofa","6 rating","72000/-","Add to Cart","Buy Now"));
+
 
         F_productadapter f_productadapter = new F_productadapter(this,arrayList);
         F_playout.setAdapter(f_productadapter);

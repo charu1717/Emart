@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,6 +31,22 @@ public class electronicdetailproduct extends AppCompatActivity {
         String price = intent.getExtras().getString("price");
         String rank = intent.getExtras().getString("rank");
         int electronic = intent.getExtras().getInt("electronic");
+
+        Eleaddtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(electronicdetailproduct.this,mycart.class);
+                startActivity(main);
+            }
+        });
+
+        Elebuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(electronicdetailproduct.this,orderplaced.class);
+                startActivity(main);
+            }
+        });
 
         Eleprice.setText(price);
         Eledesc.setText(desc);
