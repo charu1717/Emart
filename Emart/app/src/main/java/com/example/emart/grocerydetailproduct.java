@@ -43,7 +43,7 @@ public class grocerydetailproduct extends AppCompatActivity {
         grobuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main = new Intent(grocerydetailproduct.this,orderplaced.class);
+                Intent main = new Intent(grocerydetailproduct.this, grocery_orderplace.class);
                 startActivity(main);
             }
         });

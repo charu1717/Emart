@@ -15,7 +15,16 @@
         android:theme="@style/Theme.Emart"
         tools:targetApi="31">
         <activity
-            android:name=".orderplaced"
+            android:name=".grocery_orderplace"
+            android:exported="false" />
+        <activity
+            android:name=".cosmetic_oplace"
+            android:exported="false" />
+        <activity
+            android:name=".elec_orderplaced"
+            android:exported="false" />
+        <activity
+            android:name=".Orderplaced"
             android:exported="false" />
         <activity
             android:name=".myaccount"
