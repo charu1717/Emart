@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,6 +31,22 @@ public class grocerydetailproduct extends AppCompatActivity {
         String price = intent.getExtras().getString("price");
         String rank = intent.getExtras().getString("rank");
         int grocery = intent.getExtras().getInt("grocery");
+
+        groaddtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(grocerydetailproduct.this,mycart.class);
+                startActivity(main);
+            }
+        });
+
+        grobuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(grocerydetailproduct.this,orderplaced.class);
+                startActivity(main);
+            }
+        });
 
         groprice.setText(price);
         grodesc.setText(desc);

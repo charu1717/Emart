@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +33,22 @@ public class cosmeticdetailproduct extends AppCompatActivity {
         String price = intent.getExtras().getString("price");
         String rank = intent.getExtras().getString("rank");
         int cosmetic = intent.getExtras().getInt("cosmetic");
+
+        Cosmaddtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(cosmeticdetailproduct.this,mycart.class);
+                startActivity(main);
+            }
+        });
+
+        Cosmbuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(cosmeticdetailproduct.this,orderplaced.class);
+                startActivity(main);
+            }
+        });
 
         Cosmdesc.setText(desc);
         Cosmprice.setText(price);
