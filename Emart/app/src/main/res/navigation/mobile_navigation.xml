@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.emart.ui.home.HomeFragment"
+        android:name="com.example.emart.ui.Mycart.Mycart_Fragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/mycart_fragment" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.emart.ui.gallery.GalleryFragment"
+        android:name="com.example.emart.ui.Myorder.Myorder_Fragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/myorder_fragment" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.emart.ui.slideshow.SlideshowFragment"
+        android:name="com.example.emart.ui.Myaccount.Myaccount_Fragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/myaccount_flagment" />
 </navigation>

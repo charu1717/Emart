@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.emart.R;
 import com.example.emart.furnituredetailproduct;
+import com.example.emart.myaccount;
+import com.example.emart.myorder;
 
 import java.util.ArrayList;
 
@@ -53,6 +55,7 @@ public class F_productadapter extends RecyclerView.Adapter<F_productadapter.view
                 context.startActivity(intent);
             }
         });
+
     }
 
     @Override
