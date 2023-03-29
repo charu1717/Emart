@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.emart.databinding.ActivityHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -33,7 +34,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
 
     private TextView fullname,mail;
 
-    private ImageView Home,Furniture,Electronics,Cosmetics,Grocery,logo;
+    private ImageView Home,Furniture,Electronics,Cosmetics,Grocery,logo,icon;
 
     private View cart;
     private Button logout;
@@ -47,8 +48,14 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
     FirebaseFirestore fstore;
     String userId;
 
+   FirebaseUser user;
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+    }
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -80,7 +87,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
 
 
 
-
+        icon = findViewById(R.id.main_cart_icon);
         fullname = findViewById(R.id.main_fullname);
         mail = findViewById(R.id.main_email);
         logo = findViewById(R.id.Applogo);
@@ -211,6 +218,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
 
 
 
+
     }
 
     @Override
@@ -227,6 +235,9 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
         if(id == R.id.search_icon){//to search icon
             return true;
         } else if (id == R.id.main_cart_icon) {//to cart
+
+                    Intent intent = new Intent(Home_Activity.this,mycart.class);
+                    startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);

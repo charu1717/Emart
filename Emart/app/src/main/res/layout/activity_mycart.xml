@@ -19,8 +19,7 @@
             android:textColor="@color/white"
             android:textSize="35dp"
             android:padding="8dp"
-            android:fontFamily="@font/alegreya"
-            android:textStyle="bold"/>
+            android:textStyle="italic"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
