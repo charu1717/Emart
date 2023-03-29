@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         b1= findViewById(R.id.button3);
         b2=findViewById(R.id.button4);
-        cancel = findViewById(R.id.cancel_login);
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,13 +35,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent sigup_intent = new Intent(MainActivity.this,sgpage.class);
                 startActivity(sigup_intent);
-            }
-        });
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent cancel_login = new Intent(MainActivity.this,Home_Activity.class);
-                startActivity(cancel_login);
             }
         });
     }

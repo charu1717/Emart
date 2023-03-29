@@ -38,7 +38,7 @@ public class furnituredetailproduct extends AppCompatActivity {
         furbuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main = new Intent(furnituredetailproduct.this,orderplaced.class);
+                Intent main = new Intent(furnituredetailproduct.this, Orderplaced.class);
                 startActivity(main);
             }
         });

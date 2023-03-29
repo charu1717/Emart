@@ -45,7 +45,7 @@ public class cosmeticdetailproduct extends AppCompatActivity {
         Cosmbuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main = new Intent(cosmeticdetailproduct.this,orderplaced.class);
+                Intent main = new Intent(cosmeticdetailproduct.this, cosmetic_oplace.class);
                 startActivity(main);
             }
         });
