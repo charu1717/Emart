@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.emart.databinding.ActivityHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -48,8 +49,14 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
     FirebaseFirestore fstore;
     String userId;
 
+   FirebaseUser user;
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+    }
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -208,6 +215,7 @@ public class Home_Activity extends AppCompatActivity implements NavigationView.O
                 startActivity(logout);
             }
         });
+
 
 
 
